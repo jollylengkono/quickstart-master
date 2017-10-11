@@ -1,7 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent }  from './account/app.component';
+import { AppComponent }  from './account/account.component';
 import { AccountsList } from './account/accounts_list.component';
 import { AccountForm } from './account/account_form.component';
 import { AccountService } from './account/account.services';

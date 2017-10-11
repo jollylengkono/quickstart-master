@@ -8,20 +8,7 @@ export class AccountService {
 
   constructor(@Optional() private _logger:LoggerService){} //1
 
-  private _accounts:Array<Account> = [
-    {
-      id: 1,
-      title: "Bank BCA",
-      description: "This is my main bank account.",
-      balance: 501.2
-    },
-    {
-      id: 2,
-      title: "Bank BNI",
-      description: "My secret account.",
-      balance: 1024.10
-    }
-  ];
+  private _accounts:Array<Account> = [];
 
   public getAll():Promise<Array<Account>> {
     return Promise.resolve(this._accounts);
