@@ -6,8 +6,8 @@ import {AccountService} from './account.services';
 
 @Component({
   selector: 'my-app',
-  templateUrl: 'app/app.component.html',
-  styleUrls:['app/app.component.css']
+  templateUrl: 'app/account/app.component.html',
+  styleUrls:['app/account/app.component.css']
 })
 
 export class AppComponent  {
