@@ -1,7 +1,7 @@
 import {Component, ViewChild, Injector} from '@angular/core';
-import {Account} from './account/account.model';
-import {AccountForm} from './account/account_form.component';
-import {AccountService} from './account/account.services';
+import {Account} from './account.model';
+import {AccountForm} from './account_form.component';
+import {AccountService} from './account.services';
 
 
 @Component({
