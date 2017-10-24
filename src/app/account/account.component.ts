@@ -5,12 +5,12 @@ import {AccountService} from './account.services';
 
 
 @Component({
-  selector: 'my-app',
+  selector: 'accounts',
   templateUrl: 'app/account/account.component.html',
   styleUrls:['app/account/account.component.css']
 })
 
-export class AppComponent  {
+export class AccountComponent  {
 
   private _accounts:Array<Account> = [];
 
