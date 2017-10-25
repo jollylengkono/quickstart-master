@@ -9,15 +9,25 @@ import { AccountService } from './account/account.services';
 import { LoggerService } from './util/logger.service';
 import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
+import { ListComponent} from './account/list.component';
+import { CreateComponent} from './account/create.component';
 
 const appRoutes:Routes = [
   {path: '', component:HomeComponent},
-  {path: 'accounts', component:AccountComponent}
+  {
+    path: 'accounts',
+    component: AccountComponent,
+    children: [
+      {path: 'list', component: ListComponent},
+      {path: 'create', component: CreateComponent},
+      {path: '', redirectTo: 'list', pathMatch: 'full'}
+    ]
+  }
 ];
 
 @NgModule({
   imports:      [ BrowserModule, RouterModule.forRoot(appRoutes, {enableTracing:true}) ],
-  declarations: [ AccountComponent, AccountsList, AccountForm, HomeComponent, AppComponent ],
+  declarations: [ AccountComponent, AccountsList, AccountForm, HomeComponent, AppComponent, ListComponent, CreateComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ AccountService, LoggerService ]
 })

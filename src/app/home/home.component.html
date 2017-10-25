@@ -2,4 +2,7 @@
 <h3>This is the home component.</h3>
 
 
-<h3><a routerLink="/accounts" routerLinkActive="active">Look at your accounts.</a></h3>
+<h3>
+  <a [routerLink]="['/accounts']" routerLinkActive="active">Look at your accounts</a> or
+  <a [routerLink]="['/accounts', 'create']" routerLinkActive="active">create a new one</a>
+</h3>

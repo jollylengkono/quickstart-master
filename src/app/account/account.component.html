@@ -1,3 +1,6 @@
 <h2>Your accounts</h2>
-<accounts-list [accounts]="_accounts" (delete)="removeAcc($event)"></accounts-list>
-<account-form (created)="createAcc($event)" [error]="createAccError"></account-form>
+
+<a [routerLink]="['list']" routerLinkActive="active">All accounts</a> |
+<a [routerLink]="['create']" routerLinkActive="active">Create a new one</a>
+
+<router-outlet></router-outlet>
