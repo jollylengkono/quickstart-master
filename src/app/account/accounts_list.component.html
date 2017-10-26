@@ -3,7 +3,7 @@
 </div>
 
 <div class="row">
-  <div class="acc col-md-12" *ngFor="let acc of _accounts; let i = index">
+  <div class="acc col-md-12" *ngFor="let acc of _accounts; let i = index" (click)=_showDetails(acc)>
     <h2 class="title">{{acc.title}}</h2>
     <p>{{acc.description}}</p>
     <p>Balance: <strong class="lead">{{acc.balance}}</strong></p>

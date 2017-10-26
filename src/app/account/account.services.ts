@@ -14,6 +14,18 @@ export class AccountService {
     return Promise.resolve(this._accounts);
   }
 
+  public getById(accountId:number):Promise<Account> {
+    return new Promise((resolve, reject) => {
+      var foundAcc = this._accounts.find(acc => acc.id == accountId);
+
+      if(!foundAcc) {
+        reject('No account with this id.');
+      } else {
+        resolve(foundAcc);
+      }
+    });
+  }
+
   private _nextId = 3;
   private _accountLimit = 3;
 
